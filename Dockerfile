@@ -3,12 +3,10 @@ FROM debian:buster-slim
 # Image metadata
 # git commit
 LABEL org.opencontainers.image.revision="-"
-LABEL org.opencontainers.image.source="https://github.com/jkaldon/arm64v8-bitcoincore/tree/master"
+LABEL org.opencontainers.image.source="https://github.com/jkaldon/arm64v8-bitcoind/tree/master"
 
 ARG BITCOIN_CORE_BASE_URL=https://bitcoincore.org/bin/bitcoin-core-22.0/
 ARG BITCOIN_CORE_ARCHIVE=bitcoin-22.0-aarch64-linux-gnu.tar.gz
-ARG RPC_USERNAME=raspibolt
-ARG RPC_PASSWORD=raspibolt
 
 RUN set -e && \
   apt-get update && \
