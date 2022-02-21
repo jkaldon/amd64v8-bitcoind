@@ -74,16 +74,16 @@ service:
     - port: 8332
       targetPort: 8332
       protocol: TCP
-      name: rpc-json
+      name: rpc
     - port: 8333
       targetPort: 8333
       protocol: TCP
-      name: rpc
+      name: p2p
     - port: 28332
       targetPort: 28332
       protocol: TCP
-      name: rpc-json-zmq
+      name: rpc-zmq
     - port: 28333
       targetPort: 28333
       protocol: TCP
-      name: rpc-zmq
+      name: p2p-zmq
