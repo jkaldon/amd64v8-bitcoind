@@ -6,10 +6,6 @@ metadata:
     {{- include "arm64v8-bitcoind.labels" . | nindent 4 }}
 spec:
   type: {{ .Values.service.type }}
-  ports:
-    - port: {{ .Values.service.port }}
-      targetPort: http
-      protocol: TCP
-      name: http
+  ports: {{- toYaml .Values.service.ports | nindent 4 }}
   selector:
     {{- include "arm64v8-bitcoind.selectorLabels" . | nindent 4 }}
