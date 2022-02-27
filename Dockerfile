@@ -54,5 +54,5 @@ CMD [ \
   "-pid=/home/bitcoin/bitcoind.pid", \
   "-conf=/home/bitcoin/.bitcoin/bitcoin.conf", \
   "-datadir=/home/bitcoin/.bitcoin", \
-  "-startupnotify='chmod g+r /home/bitcoin/.bitcoin/.cookie'" \
+  "-startupnotify=/bin/chmod g+r /home/bitcoin/.bitcoin/.cookie" \
 ]
