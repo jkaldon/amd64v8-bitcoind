@@ -52,6 +52,9 @@ spec:
           {{- with .Values.persistence.mounts }}
           volumeMounts: {{- toYaml . | nindent 12 }}
           {{- end }}
+          {{- with .Values.image.lifecycle }}
+          lifecycle: {{- toYaml . | nindent 12 }}
+          {{- end }}
       {{- with .Values.persistence.volumes }}
       volumes: {{- toYaml . | nindent 6 }}
       {{- end }}
