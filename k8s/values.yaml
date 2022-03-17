@@ -15,6 +15,13 @@ image:
     preStop:
       exec:
         command: ["/usr/local/bin/bitcoin-cli", "stop"]
+  resources:
+    requests:
+      cpu: 1000m
+      memory: 2Gi
+    limits:
+      cpu: 2000m
+      memory: 3Gi
 
 #initEnv:
 #- name: RPC_USERNAME
@@ -66,10 +73,10 @@ podAnnotations: {}
 podSecurityContext:
   fsGroup: 1000
 
-securityContext: {}
-  # capabilities:
-  #   drop:
-  #   - ALL
+securityContext:
+  capabilities:
+    drop:
+    - ALL
   # readOnlyRootFilesystem: true
   # runAsNonRoot: true
   # runAsUser: 1000
