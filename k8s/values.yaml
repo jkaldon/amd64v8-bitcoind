@@ -10,7 +10,7 @@ image:
   repository: jkaldon/arm64v8-bitcoind
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "22.0.0-14"
+  tag: "23.0.0-1"
   lifecycle:
     preStop:
       exec:

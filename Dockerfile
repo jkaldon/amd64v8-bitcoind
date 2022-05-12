@@ -5,8 +5,8 @@ FROM debian:buster-slim
 LABEL org.opencontainers.image.revision="-"
 LABEL org.opencontainers.image.source="https://github.com/jkaldon/arm64v8-bitcoind/tree/master"
 
-ARG BITCOIN_CORE_BASE_URL=https://bitcoincore.org/bin/bitcoin-core-22.0/
-ARG BITCOIN_CORE_ARCHIVE=bitcoin-22.0-aarch64-linux-gnu.tar.gz
+ARG BITCOIN_CORE_BASE_URL=https://bitcoincore.org/bin/bitcoin-core-23.0/
+ARG BITCOIN_CORE_ARCHIVE=bitcoin-23.0-aarch64-linux-gnu.tar.gz
 
 RUN set -e && \
   apt-get update && \
